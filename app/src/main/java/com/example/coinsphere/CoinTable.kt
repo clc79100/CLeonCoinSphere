@@ -9,12 +9,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Divider
 import androidx.compose.material3.DividerDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
@@ -23,6 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -57,17 +56,23 @@ fun ColumnTitle(horizontalPadding: Dp){
         Text(
             text = "#",
             fontSize = 12.sp,
-            color = TextDim
+            color = TextDim,
+            modifier = Modifier
+                .weight(1f)
         )
         Text(
             text = "Name",
             fontSize = 12.sp,
-            color = TextDim
+            color = TextDim,
+            modifier = Modifier
+                .weight(2f)
         )
         Text(
             text = "Price",
             fontSize = 12.sp,
-            color = TextDim
+            color = TextDim,
+            modifier = Modifier
+                .weight(2f)
         )
     }
 
@@ -95,28 +100,37 @@ fun CoinCardTable(horizontalPadding: Dp){
                     Text(
                         text = coin.relevance.toString(),
                         fontSize = 13.sp,
-                        color = TextDim
+                        color = TextDim,
+                        modifier = Modifier
+                            .weight(1f)
                     )
 
                     AsyncImage(
                         model = coin.image,
                         contentDescription = coin.name,
+                        placeholder = painterResource(R.drawable.ic_launcher_foreground),
+                        error = painterResource(R.drawable.ic_launcher_background),
                         modifier = Modifier
-                            .size(10.dp),
-                            //.clip(CircleShape),
+                            .size(30.dp)
+                            .clip(CircleShape),
                         contentScale = ContentScale.Companion.Crop
                     )
 
                     Text(
                         text = coin.name,
                         fontSize = 14.sp,
-                        color = TextMain
+                        color = TextMain,
+                        modifier = Modifier
+                            .padding(start = 12.dp)
+                            .weight(2f)
                     )
 
                     Text(
-                        text = "$${coin.price.toString()}",
+                        text = String.format("\$%,.2f", coin.price),
                         fontSize = 14.sp,
-                        color = TextMain
+                        color = TextMain,
+                        modifier = Modifier
+                            .weight(2f)
                     )
                 }
             }

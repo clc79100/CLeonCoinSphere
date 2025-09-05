@@ -7,13 +7,13 @@ data class CoinItem (
 )
 
 val CoinList = listOf(
-    CoinItem(1, "BitCoin", 109_797.37f, "https://oem.com.mx/diariodequeretaro/img/18751754/1664355593/BASE_LANDSCAPE/1200/Cleopatra.jpg"),//"https://cryptologos.cc/logos/bitcoin-btc-logo.png"),
-    CoinItem(2, "Etherum", 4_321.21f, "https://cryptologos.cc/logos/ethereum-eth-logo.png"),
-    CoinItem(3, "Tether", 1.000f, "https://cryptologos.cc/logos/tether-usdt-logo.png"),
-    CoinItem(4, "XPR", 2.8100f, "https://cryptologos.cc/logos/xrp-xrp-logo.png"),
-    CoinItem(5, "BNB", 845.0000f, "https://cryptologos.cc/logos/bnb-bnb-logo.png"),
-    CoinItem(6, "Solana", 201.8500f, "https://cryptologos.cc/logos/solana-sol-logo.png"),
-    CoinItem(7, "USDC", 0.9998f, "https://cryptologos.cc/logos/usd-coin-usdc-logo.png"),
-    CoinItem(8, "DogeCoin", 0.1320f, "https://cryptologos.cc/logos/dogecoin-doge-logo.png"),
-    CoinItem(9, "TRON", 0.3630f, "https://cryptologos.cc/logos/tron-trx-logo.png")
+    CoinItem(1, "BitCoin", 109_797.37f, "https://assets.coingecko.com/coins/images/1/standard/bitcoin.png?1696501400"),
+    CoinItem(2, "Etherum", 4_321.21f, "https://assets.coingecko.com/coins/images/279/standard/ethereum.png?1696501628"),
+    CoinItem(3, "Tether", 1.000f, "https://assets.coingecko.com/coins/images/325/standard/Tether.png?1696501661"),
+    CoinItem(4, "XPR", 2.8100f, "https://assets.coingecko.com/coins/images/44/standard/xrp-symbol-white-128.png?1696501442"),
+    CoinItem(5, "BNB", 845.0000f, "https://assets.coingecko.com/coins/images/825/standard/bnb-icon2_2x.png?1696501970"),
+    CoinItem(6, "Solana", 201.8500f, "https://assets.coingecko.com/coins/images/4128/standard/solana.png?1718769756"),
+    CoinItem(7, "USDC", 0.9998f, "https://assets.coingecko.com/coins/images/6319/standard/usdc.png?1696506694"),
+    CoinItem(8, "DogeCoin", 0.1320f, "https://assets.coingecko.com/coins/images/5/standard/dogecoin.png?1696501409"),
+    CoinItem(9, "TRON", 0.3630f, "https://assets.coingecko.com/coins/images/1094/standard/tron-logo.png?1696502193")
 )
