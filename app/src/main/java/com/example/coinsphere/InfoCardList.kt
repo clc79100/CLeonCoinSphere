@@ -16,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -48,13 +49,14 @@ fun InfoCardList(horizontalPadding: Dp) {
                 ){
                     Text(
                         text = infoCard.category,
-                        color = TextDim,
-                        fontSize = 13.sp
+                        fontSize = 13.sp,
+                        color = TextDim
                     )
                     Text(
                         text = infoCard.title,
-                        color = TextMain,
-                        fontSize = 18.sp
+                        fontSize = 18.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = TextMain
                     )
                 }
             }

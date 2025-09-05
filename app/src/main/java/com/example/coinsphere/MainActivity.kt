@@ -40,7 +40,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 
 fun HomeScreen(modifier: Modifier = Modifier) {
-    var horizontalPadding = 20.dp
+    val horizontalPadding = 20.dp
     Column (
         modifier = Modifier
             .background(color = Background)
@@ -56,6 +56,8 @@ fun HomeScreen(modifier: Modifier = Modifier) {
                 .padding(horizontal = horizontalPadding)
         )
         InfoCardList(horizontalPadding)
+
+        CoinTable(horizontalPadding)
     }
 
 }
